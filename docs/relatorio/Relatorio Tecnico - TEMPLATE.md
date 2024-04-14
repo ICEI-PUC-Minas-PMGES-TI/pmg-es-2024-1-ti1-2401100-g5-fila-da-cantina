@@ -9,14 +9,11 @@ Engenharia de Software
 
 ## Participantes
 
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
-> Os membros do grupo são: 
-> - João Vitor Caires Damasceno Silva
-> - Fernando Rodrigues da Mata
-> - Victor Chaves Janot Pacheco Lopes
-> - Marcelo Estevis Bernardi
-> - Manoel Rodrigues Bezerra Neto
+- João Vitor Caires Damasceno Silva
+- Fernando Rodrigues da Mata
+- Victor Chaves Janot Pacheco Lopes
+- Marcelo Estevis Bernardi
+- Manoel Rodrigues Bezerra Neto
 
 # Estrutura do Documento
 
