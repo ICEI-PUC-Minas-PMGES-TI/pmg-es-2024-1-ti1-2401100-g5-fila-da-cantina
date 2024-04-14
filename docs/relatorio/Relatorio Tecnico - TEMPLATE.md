@@ -54,71 +54,68 @@ Engenharia de Software
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O problema que o nosso software visa resolver é o longo tempo de espera e a falta de eficiência no processo de atendimento da cantina. Muitas vezes, em ambientes com grande fluxo de pessoas, tornam as filas na cantina podem se tornar excessivamente longas, resultando em atrasos no horário de refeição, frustração dos clientes e até mesmo perda de receita para a cantina.
 
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Alguns dos principais problemas enfrentados são:
+
+1. **Longas filas de espera**: Os clientes precisam esperar por um longo tempo para fazer seus pedidos, o que pode levar à insatisfação e ao desinteresse em utilizar os serviços da cantina.
+
+2. **Tempo de espera imprevisível**: A falta de previsibilidade no tempo de espera pode levar os clientes a evitar a cantina ou a se dirigirem para ela em horários de pico, tornando o problema ainda pior.
+
+3. **Desorganização no atendimento**: A falta de um sistema eficiente de gestão de filas pode levar a confusões no atendimento, erros nos pedidos e atrasos na entrega das refeições.
+
+4. **Baixa utilização dos recursos**: Em momentos de baixa demanda, os recursos da cantina, como pessoal e equipamentos, podem estar subutilizados, enquanto em horários de pico podem estar sobrecarregados.
+
+Ao abordar esses problemas, o software busca melhorar a experiência dos clientes na cantina, reduzindo os tempos de espera, aumentando a eficiência do atendimento e garantindo uma distribuição mais equilibrada dos recursos disponíveis.
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+1. **Reduzir o tempo de espera**: O principal objetivo é diminuir significativamente o tempo que os clientes passam na fila da cantina, tornando o processo de compra mais rápido e eficiente.
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+2. **Aumentar a satisfação do cliente**: Busca-se garantir que os clientes tenham uma experiência mais agradável ao utilizar os serviços da cantina, minimizando a frustração causada por longas filas e tempos de espera imprevisíveis.
+
+3. **Otimizar a utilização de recursos**: Pretende-se garantir que os recursos da cantina, como pessoal, equipamentos e matéria-prima, sejam utilizados de forma eficiente, evitando ociosidade em momentos de baixa demanda e sobrecarga em horários de pico.
+
+4. **Proporcionar previsibilidade no atendimento**: O software deve fornecer aos clientes informações claras sobre o tempo de espera estimado na fila, ajudando-os a planejar melhor seus horários de refeição e evitando surpresas desagradáveis.
+
+5. **Facilitar a gestão da cantina**: Além de melhorar a experiência do cliente, o software também deve facilitar a gestão interna da cantina, fornecendo dados e métricas úteis para monitorar o desempenho do atendimento, prever a demanda futura e tomar decisões estratégicas.
+
+Esses objetivos visam não apenas resolver o problema imediato das longas filas na cantina, mas também proporcionar benefícios a longo prazo, tanto para os clientes quanto para a própria equipe da cantina e a administração do local onde o software será implementado.
 
 ## Justificativa
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Trabalhar com a aplicação de otimização da fila da cantina é importante por várias razões:
 
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+1. **Melhoria da experiência do cliente**: Ao reduzir o tempo de espera e proporcionar uma experiência mais eficiente na cantina, podemos aumentar a satisfação dos clientes. Isso não só os torna mais propensos a utilizar os serviços da cantina novamente, mas também pode gerar uma percepção positiva da instituição como um todo.
+
+2. **Aumento da eficiência operacional**: Uma cantina mais eficiente não só beneficia os clientes, mas também a equipe que trabalha nela. Ao otimizar a utilização de recursos e simplificar os processos de atendimento, podemos melhorar a produtividade da equipe e reduzir o estresse associado a picos de demanda.
+
+3. **Redução de custos**: A utilização mais eficiente de recursos pode levar a uma redução nos custos operacionais da cantina, seja pela redução de horas extras da equipe, pelo melhor aproveitamento de ingredientes ou pela minimização de desperdícios.
+
+4. **Análise de dados para tomada de decisão**: Implementar um software de gestão de filas permite coletar dados valiosos sobre o comportamento dos clientes, padrões de consumo e desempenho operacional da cantina. Esses dados podem ser usados para identificar tendências, prever demandas futuras e tomar decisões estratégicas mais embasadas.
+
+5. **Competitividade e reputação institucional**: Em um mercado cada vez mais competitivo, oferecer serviços de alimentação eficientes e satisfatórios pode ser um diferencial importante para atrair e reter alunos, funcionários ou clientes. Uma cantina bem gerenciada contribui para a reputação positiva da instituição.
+
+Ao escolher os objetivos específicos para o projeto, focamos em resolver os problemas mais prementes identificados no processo de atendimento da cantina, visando não apenas a satisfação imediata dos clientes, mas também benefícios a longo prazo para a instituição e seus stakeholders.
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Para entender melhor os diferentes perfis de usuários da aplicação de otimização da fila da cantina, podemos identificar os seguintes grupos:
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+1. **Clientes da Cantina**:
+   - **Alunos**: Podem variar desde crianças em idade escolar até jovens universitários. Podem ter diferentes níveis de familiaridade com a tecnologia, com alguns sendo muito proficientes em dispositivos móveis e aplicativos, enquanto outros podem ter menos experiência.
+   - **Funcionários e professores**: Podem ter uma ampla gama de idades e habilidades tecnológicas. Alguns podem ser proficientes no uso de tecnologia, enquanto outros podem precisar de mais orientação.
+   - **Visitantes/eventuais**: Pessoas que ocasionalmente utilizam os serviços da cantina, como pais em eventos escolares ou convidados em eventos corporativos.
+
+2. **Equipe da Cantina**:
+   - **Atendentes/caixas**: Responsáveis por operar o sistema de atendimento e registrar os pedidos dos clientes. Eles podem precisar de treinamento para usar o software de forma eficaz.
+   - **Gerentes/supervisores**: Responsáveis por monitorar o desempenho da cantina, ajustar a operação conforme necessário e analisar os dados coletados pelo software. Eles podem precisar de acesso a ferramentas de análise de dados mais avançadas.
+
+3. **Administradores da Instituição**:
+   - **Diretores/gestores escolares**: Responsáveis pela administração geral da instituição. Eles podem estar interessados nos dados coletados pelo software para tomar decisões sobre alocação de recursos e políticas relacionadas à cantina.
+   - **Equipe de TI**: Responsável pela manutenção e suporte técnico do software. Eles precisam garantir que o sistema seja confiável, seguro e fácil de usar para todos os usuários.
+
+Esses perfis de usuários variam em termos de conhecimento prévio sobre tecnologia, nível de experiência e relações hierárquicas dentro da instituição. Portanto, é importante projetar a aplicação de forma a ser acessível e intuitiva para todos os usuários, independentemente de seu nível de familiaridade com a tecnologia.
  
 # Especificações do Projeto
 
