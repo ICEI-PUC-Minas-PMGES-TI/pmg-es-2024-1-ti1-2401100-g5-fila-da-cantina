@@ -177,9 +177,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|---------------------------------------------------|-------|
 |RF-001| Permitir que o usuário se cadastre                | ALTA  |
 |RF-002| Permitir que o usuário realize um pedido          | ALTA  |
-|RF-003| Administrar disponibilidade do cardápio           | MÉDIA |
-|RF-004| Permitir que o usuário faça um pedido em grupo    | MÉDIA |
-|RF-005| Permitir que o usuário veja seu gasto médio       | BAIXA |
+|RF-003| CRUD de usuários e produtos                       | ALTA  |
+|RF-004| Administrar disponibilidade do cardápio           | MÉDIA |
+|RF-005| Permitir que o usuário faça um pedido em grupo    | MÉDIA |
+|RF-006| Permitir que o usuário veja seu gasto médio       | BAIXA |
 
 
 ### Requisitos não Funcionais
