@@ -119,11 +119,7 @@ Esses perfis de usuários variam em termos de conhecimento prévio sobre tecnolo
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
+Nosso projeto visa a elaboração de um software cuja funcionalidade é resolver o problema de congestionamento do atendimento das cantinas, evitando longas e demoradas filas, e também, problemas com a acertividade no momento da entrega do pedido. Utilizamos algumas técninas para o desenvolvimento da ideia como, por exemplo, entrevistas para entender as experiências de clientes e também de funcionários da cantina. Tendo isso em vista, através de nossas analises, fomos incrementando ao projeto ideias e sugestões do público, uma vez que, serão estes os beneficiados da iniciativa. Além de entrevistas, fizemos reuniões para discussão de sugestões dos participantes para que, através de análises críticas buscarmos o consenso sobre o que é mais vantajoso e coerente ao projeto. Ademais, em sequência, elaboramos ideias visuais para o software juntamente de funções que irão operar neste, visando assim, chegar em um produto minimamente viável (protótipo), para ver se é funcional, se tem muitos bugs e se atende a demanda da situação.
 
 ## Personas e Mapas de Empatia
 
