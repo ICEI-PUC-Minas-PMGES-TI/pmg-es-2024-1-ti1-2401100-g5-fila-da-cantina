@@ -1,7 +1,5 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
-
-Cantina Express
+# Cantina Express
 
 `CURSO` 
 
