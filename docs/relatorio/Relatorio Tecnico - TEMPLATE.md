@@ -260,12 +260,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Divisão de Papéis
 
-Produção da capa e do entendimento 1 e 2: João Caires
-Produção do entendimento 3, 4 e 5: Fernando
-Etapa de exploração: Grupo todo
-Slides: Grupo todo
-Github: Manoel, Marcelo, Fernando, Victor e João
-Documentação do projeto (PDF): Grupo todo
+- Produção da capa e do entendimento 1 e 2: João Caires
+- Produção do entendimento 3, 4 e 5: Fernando
+- Etapa de exploração: Grupo todo
+- Slides: Grupo todo
+- Github: Manoel, Marcelo, Fernando, Victor e João
+- Documentação do projeto (PDF): Grupo todo
 
 
 ## Ferramentas
