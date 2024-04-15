@@ -121,30 +121,24 @@ Nosso projeto visa a elaboração de um software cuja funcionalidade é resolver
 
 ## Personas e Mapas de Empatia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Relação da Persona com seu Mapa de Empatia
+Visão: A visão de Rafaela é impactada pela constante exposição a ambientes tecnologicamente avançados e inspiradores, o que molda suas expectativas e preferências.
+Audição: Ela é influenciada por fontes que valorizam a inovação e a eficiência, o que a motiva a buscar soluções que economizem tempo e melhorem a experiência de vida.
+Pensamentos e sentimentos: Seus sonhos e preocupações reforçam seu desejo por ferramentas que a ajudem a alcançar seus objetivos mais rapidamente e com maior eficácia.
+Fala e ações: O que Rafaela fala e faz reflete seu interesse em aplicar soluções práticas e eficientes em seu dia a dia, o que deve ser considerado ao desenvolver produtos que atendam a essas necessidades.
+Dores e necessidades: Suas dores, como a frustração com ineficiências e a preocupação com o gerenciamento de tempo, podem ser diretamente abordadas com produtos que oferecem conveniência e economia de tempo, como o software de gerenciamento de filas da cantina.
 
+Visão: O ambiente visual de Marcos é dominado por elementos de tecnologia e gaming, o que influencia suas preferências e comportamento de compra.
+Audição: Ele é constantemente influenciado por vozes dentro da comunidade de tecnologia e gaming, o que molda suas aspirações e escolhas.
+Pensamentos e sentimentos: Os sonhos e preocupações de Marcos direcionam seu interesse por soluções que maximizem o uso eficiente do tempo e da tecnologia.
+Fala e ações: O que Marcos fala e faz reflete uma vida integrada com a tecnologia e jogos, indicando a necessidade de produtos e serviços que se alinhem com essa paixão.
+Dores e necessidades: As dores de Marcos, como a preocupação com o tempo e a frustração com ineficiências, são áreas chave onde serviços eficientes podem atrair sua atenção e resolver seus problemas específicos.
 
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que 
-> você deve ser enumerar e descrever precisamente e de forma
-> personalizada todos os principais envolvidos com a solução almeja. 
-> 
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Como fazer um mapa de empatia - Vídeo](https://www.youtube.com/watch?v=JlKHGpVoA2Y)
-> 
-> 
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
+Visão: A visão de Maria é constantemente influenciada por ambientes educativos e naturais, o que reforça a importância de soluções que respeitem e promovam a sustentabilidade.
+Audição: Influenciada por vozes que priorizam a educação e a sustentabilidade, suas escolhas são moldadas por esses valores.
+Pensamentos e sentimentos: Os sonhos e preocupações de Maria destacam sua necessidade de ferramentas que facilitam a implementação de práticas educacionais e sustentáveis.
+Fala e ações: As conversas e ações de Maria refletem seu compromisso com a educação e a jardinagem, indicando que ela valoriza produtos e serviços que suportem esses interesses.
+Dores e necessidades: As dores de Maria, relacionadas à gestão do tempo e à implementação de seus projetos, são cruciais para entender como serviços eficientes podem resolver seus problemas específicos.
 
 
 ## Histórias de Usuários
