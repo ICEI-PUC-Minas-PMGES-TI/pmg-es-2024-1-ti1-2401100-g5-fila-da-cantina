@@ -264,13 +264,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+Produção da capa e do entendimento 1 e 2: João Caires
+Produção do entendimento 3, 4 e 5: Fernando
+Etapa de exploração: Grupo todo
+Slides: Grupo todo
+Github: Manoel, Marcelo, Fernando, Victor e João
+Documentação do projeto (PDF): Grupo todo
 
 
 ## Ferramentas
