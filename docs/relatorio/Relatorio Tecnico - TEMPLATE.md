@@ -9,7 +9,6 @@ Engenharia de Software
 
 - João Vitor Caires Damasceno Silva
 - Fernando Rodrigues da Mata
-- Victor Chaves Janot Pacheco Lopes
 - Marcelo Estevis Bernardi
 - Manoel Rodrigues Bezerra Neto
 
