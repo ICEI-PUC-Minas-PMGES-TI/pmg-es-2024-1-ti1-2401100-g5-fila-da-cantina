@@ -9,7 +9,7 @@ Engenharia de Software
 
 - João Vitor Caires Damasceno Silva
 - Fernando Rodrigues da Mata
-- Marcelo Estevis Bernardi
+- Marcelo Esteves Bernardi
 - Manoel Rodrigues Bezerra Neto
 
 # Estrutura do Documento
