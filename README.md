@@ -6,7 +6,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * João Vitor Caires Damasceno Silva
 * Fernando Rodrigues da Mata
 * Victor Chaves Janot Pacheco Lopes
-* Marcelo Estevis Bernardi
+* Marcelo Esteves Bernardi
 * Manoel Rodrigues Bezerra Neto 
 
 ## Professores responsáveis
