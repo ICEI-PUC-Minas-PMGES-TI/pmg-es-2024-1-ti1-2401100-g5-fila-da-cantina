@@ -9,16 +9,10 @@ function validateFields(codigoDePessoa, name, password, email) {
   if (!new RegExp(/^[a-zA-Z]{3,16}$/).test(name))
     errors.push({ field: "name", message: "invalid field" });
 
-  if (
-    !new RegExp(
-      /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@\$])[a-zA-Z0-9!@\$]{6,}$/
-    ).test(password)
-  )
+  if (!new RegExp(/^.{6,}$/).test(password))
     errors.push({ field: "password", message: "invalid field" });
 
-  if (
-    !new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/).test(email)
-  )
+  if (!new RegExp(/^\S+@\S+\.\S+$/).test(email))
     errors.push({ field: "email", message: "invalid field" });
 
   if (errors.length > 0) return { success: false, errors };
@@ -27,12 +21,12 @@ function validateFields(codigoDePessoa, name, password, email) {
 }
 
 class User {
-  constructor(codigoDePessoa, name, email, password) {
-    this.id = crypto.randomUUID();
+  constructor(id = crypto.randomUUID(), codigoDePessoa, name, password, email) {
+    this.id = id;
     this.codigoDePessoa = codigoDePessoa;
     this.name = name;
-    this.email = email;
     this.password = password;
+    this.email = email;
   }
 
   create() {
@@ -43,25 +37,90 @@ class User {
       this.email
     );
 
-    if (!isValid.success) return "lixo";
+    if (!isValid.success) return isValid;
 
-    db.put({
-      _id: this.id,
+    db.find({
+      selector: { email: this.email },
+      fields: ["_id", "email"],
+      sort: ["email"],
+    })
+      .then((result) => {
+        if (result.docs.length > 0) {
+          return "email already exists";
+        }
+
+        db.put({
+          _id: this.id,
+          codigoDePessoa: this.codigoDePessoa,
+          name: this.name,
+          email: this.email,
+          password: this.password,
+        });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+
+    return {
+      id: this.id,
       codigoDePessoa: this.codigoDePessoa,
+      email: this.email,
+      name: this.name,
+    };
+  }
+
+  patch() {
+    const obj = {
       name: this.name,
       email: this.email,
       password: this.password,
-    });
+    };
+
+    Object.keys(obj).map((k) => (obj[k] == null ? delete obj[k] : false));
+
+    db.get(this.id)
+      .then(function (doc) {
+        const newDocument = Object.assign(doc, obj);
+        return db.put(newDocument);
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   }
 
-  async getCurrent() {
+  getCurrent() {
     db.get(this.id).then(function (doc) {
       console.log(doc);
     });
   }
 }
 
-const newUser = new User(1, 1, 1, 1);
-const fudido = newUser.create();
-const user = newUser.getCurrent();
-console.log(user);
+class Auth {
+  constructor(email, password) {
+    this.email = email;
+    this.password = password;
+  }
+
+  authenticate() {
+    db.find({
+      selector: { email: this.email },
+      fields: ["_id", "email"],
+      sort: ["email"],
+    })
+      .then((result) => {
+        if (result.docs.length > 0) {
+          return "user doesnt exists";
+        }
+
+        if (result.docs[0].password === this.password) {
+          console.log("authed");
+        }
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
+}

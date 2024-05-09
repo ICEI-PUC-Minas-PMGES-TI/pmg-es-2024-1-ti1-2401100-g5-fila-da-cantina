@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https:///cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
+    <script src="https://unpkg.com/pouchdb@8.0.1/dist/pouchdb.find.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/bundle.js"></script>
+    <script src="assets/js/registrar.js"></script>
+  </head>
+  <body>
+    <main class="flex h-screen">
+      <div class="hidden bg-blue-400 w-1/2 lg:flex"></div>
+      <div class="w-screen lg:w-1/2">
+        <div class="flex justify-center items-center h-screen">
+          <div
+            class="w-4/8 lg:w-2/3 flex justify-center flex-col gap-5 bg-slate-100 rounded-md p-10"
+          >
+            <div>
+              <span class="text-3xl text-blue-400 font-semibold"
+                >Faça seu cadastro</span
+              >
+            </div>
+            <div>
+              <div class="flex flex-col lg:flex-row gap-6 pb-4">
+                <input
+                  type="text"
+                  id="codigo"
+                  required
+                  placeholder="Código de pessoa"
+                  class="w-60 lg:w-96 p-2 rounded-md border border-gray-300 outline-none focus:ring focus:ring-blue-400"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="E-mail"
+                  class="w-60 lg:w-96 p-2 rounded-md border border-gray-300 outline-none focus:ring focus:ring-blue-400"
+                />
+              </div>
+              <div class="pb-4">
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Nome"
+                  class="w-60 lg:w-full p-2 rounded-md border border-gray-300 outline-none focus:ring focus:ring-blue-400"
+                />
+              </div>
+              <div class="flex flex-col lg:flex-row gap-6">
+                <input
+                  type="password"
+                  id="password"
+                  required
+                  placeholder="Senha"
+                  class="w-60 lg:w-96 p-2 rounded-md border border-gray-300 outline-none focus:ring focus:ring-blue-400"
+                />
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  required
+                  placeholder="Confirme senha"
+                  class="w-60 lg:w-96 p-2 border border-gray-300 outline-none focus:ring focus:ring-blue-400 rounded-md"
+                />
+              </div>
+            </div>
+            <div class="hidden flex flex-col" id="errors">
+              <span class="text-red-400 font-semibold"
+                >Corrija os erros abaixo:</span
+              >
+            </div>
+            <div
+              class="pt-6 flex flex-col lg:flex-row justify-start lg:justify-between lg:items-center gap-4 lg:gap-0"
+            >
+              <button
+                class="bg-blue-400 w-40 h-10 rounded-md text-white hover:brightness-90"
+                id="submit"
+              >
+                Registrar
+              </button>
+              <span
+                onclick="window.location='/login.html';"
+                class="text-md text-blue-700 underline underline-offset-1 hover:cursor-pointer select-none"
+                >Já possui uma conta?</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
