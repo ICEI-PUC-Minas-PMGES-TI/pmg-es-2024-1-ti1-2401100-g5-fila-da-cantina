@@ -1,5 +1,9 @@
 var db = new PouchDB("cantinaexpress");
 
+db.createIndex({
+  index: { fields: ["email"] },
+});
+
 function validateFields(codigoDePessoa, name, password, email) {
   const errors = [];
 
@@ -18,6 +22,19 @@ function validateFields(codigoDePessoa, name, password, email) {
   if (errors.length > 0) return { success: false, errors };
 
   return { success: true, errors };
+}
+
+function listUsers() {
+  db.allDocs({
+    include_docs: true,
+    attachments: true,
+  })
+    .then(function (result) {
+      console.log(result);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
 }
 
 class User {
@@ -107,15 +124,14 @@ class Auth {
   authenticate() {
     db.find({
       selector: { email: this.email },
-      fields: ["_id", "email"],
-      sort: ["email"],
+      fields: ["_id", "email", "password"],
     })
       .then((result) => {
-        if (result.docs.length > 0) {
+        if (result.docs.length <= 0) {
           return "user doesnt exists";
         }
 
-        if (result.docs[0].password === this.password) {
+        if (this.password === result.docs[0].password) {
           console.log("authed");
         }
       })

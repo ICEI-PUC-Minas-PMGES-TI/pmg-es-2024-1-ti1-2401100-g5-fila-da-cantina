@@ -4,7 +4,14 @@ var password;
 const emailRegex = /^\S+@\S+\.\S+$/;
 const passwordRegex = /^.{6,}$/;
 
+document.addEventListener("keypress", (event) => {
+  if (event.isTrusted && event.key === "Enter") {
+    $("#submit").click();
+  }
+});
+
 $(document).ready(function () {
+  listUsers();
   $("#email").on("change", function (e) {
     if (emailRegex.test(e.target.value)) {
       email = e.target.value;
@@ -41,5 +48,9 @@ $(document).ready(function () {
   $("#submit").on("click", function (e) {
     if (!password || !email) return;
     if ($("#errors").children().length > 1) return;
+
+    const auth = new Auth(email, password);
+
+    auth.authenticate();
   });
 });
