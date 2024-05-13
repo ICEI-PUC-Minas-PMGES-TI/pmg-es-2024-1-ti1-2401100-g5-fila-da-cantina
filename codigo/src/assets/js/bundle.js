@@ -1,7 +1,12 @@
 var db = new PouchDB("cantinaexpress");
+var sessions = new PouchDB("sessions");
 
 db.createIndex({
   index: { fields: ["email"] },
+});
+
+sessions.createIndex({
+  index: { fields: ["sessionId"] },
 });
 
 function validateFields(codigoDePessoa, name, password, email) {
@@ -24,17 +29,20 @@ function validateFields(codigoDePessoa, name, password, email) {
   return { success: true, errors };
 }
 
-function listUsers() {
-  db.allDocs({
-    include_docs: true,
-    attachments: true,
-  })
-    .then(function (result) {
-      console.log(result);
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
+const getCookie = (cookieStr) =>
+  cookieStr
+    .split(";")
+    .map((str) => str.trim().split(/=(.+)/))
+    .reduce((acc, curr) => {
+      acc[curr[0]] = curr[1];
+      return acc;
+    }, {});
+
+function eraseCookies() {
+  cookies = document.cookie.split("; ").map((a) => a.split("=")[0]);
+  for (var i in cookies) {
+    document.cookie = cookies[i] + "=;expires=" + new Date(0).toUTCString();
+  }
 }
 
 class User {
@@ -115,6 +123,44 @@ class User {
   }
 }
 
+class Session {
+  create(id) {
+    sessions
+      .put({
+        _id: window.crypto.randomUUID(),
+        userId: id,
+        expires: new Date(Date.now() + 1000 * 86400),
+      })
+      .then(function (result) {
+        document.cookie = `sessionid=${result.id}; path=/`;
+        document.cookie = `isSessionExpired=false; path=/`;
+      });
+  }
+
+  verify(sessionId) {
+    sessions.get(sessionId).then((result) => {
+      if (!result) {
+        document.cookie = `isSessionExpired=true; path=/`;
+        throw new Error("session not found");
+      }
+
+      if (!(new Date(result.expires) > new Date(Date.now()))) {
+        document.cookie = `isSessionExpired=true; path=/`;
+        throw new Error("session expired");
+      }
+
+      document.cookie = `isSessionExpired=false; path=/`;
+    });
+  }
+
+  async getCurrentBySession(sessionId) {
+    const session = await sessions.get(sessionId);
+    const user = await db.get(session.userId);
+
+    return user;
+  }
+}
+
 class Auth {
   constructor(email, password) {
     this.email = email;
@@ -126,17 +172,27 @@ class Auth {
       selector: { email: this.email },
       fields: ["_id", "email", "password"],
     })
-      .then((result) => {
+      .then(async (result) => {
         if (result.docs.length <= 0) {
           return "user doesnt exists";
         }
 
         if (this.password === result.docs[0].password) {
-          console.log("authed");
+          const session = new Session();
+
+          session.create(result.docs[0]._id);
+          const sessionId = window.localStorage.getItem("session");
+
+          session.verify(result.docs[0]._id, sessionId);
+
+          window.location.href = "/index.html";
         }
       })
       .catch(function (err) {
-        console.log(err);
+        if (err === "session not found" || err === "session expired") {
+          window.localStorage.removeItem("session");
+          window.location = "/login.html";
+        }
       });
   }
 }

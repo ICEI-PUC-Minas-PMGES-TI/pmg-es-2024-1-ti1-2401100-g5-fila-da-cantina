@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/pouchdb@8.0.1/dist/pouchdb.find.min.js"></script>
     <script src="./assets/js/bundle.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/index.js"></script>
   </head>
   <body>
     <header class="p-20 flex flex-row justify-between items-center">
@@ -21,12 +22,552 @@
       </div>
       <div class="flex flex-row gap-10">
         <div>
-          <button onclick="window.location='/registrar.html';" class="border border-blue-400 w-36 h-12 rounded-md text-blue-400 transition hover:bg-blue-400 hover:text-white">REGISTRAR</button>
+          <button
+            onclick="window.location='/registrar.html';"
+            class="border border-blue-400 w-36 h-12 rounded-md text-blue-400 transition hover:bg-blue-400 hover:text-white"
+            id="register"
+          >
+            REGISTRAR
+          </button>
         </div>
         <div>
-          <button onclick="window.location='/login.html';" class="bg-blue-400 w-36 h-12 rounded-md text-white transition hover:brightness-90">LOGIN</button>
+          <button
+            onclick="window.location='/login.html';"
+            class="bg-blue-400 w-36 h-12 rounded-md text-white transition hover:brightness-90"
+            id="login"
+          >
+            LOGIN
+          </button>
+        </div>
+        <div
+          class="hidden flex flex-row items-center justify-center gap-3"
+          id="avatar-wrapper"
+        >
+          <div class="p-2 select-none">
+            <div
+              class="flex justify-center items-center rounded-full w-12 h-12 bg-blue-400"
+              id="avatar"
+            ></div>
+          </div>
+          <div
+            class="icon w-8 h-8 cursor-pointer hover:brightness-90 text-blue-400"
+            id="logout"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                fill="#74C0FC"
+                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </header>
+    <main>
+      <div class="flex justify-between mr-8">
+        <div class="w-full lg:w-3/4 h-full m-8">
+          <div class="rounded-md bg-blue-400 w-full">
+            <span class="pr-2 pl-2 text-white font-semibold">Cardápio</span>
+          </div>
+          <div class="flex flex-col flex-grow pt-2">
+            <div>
+              <div class="pb-4">
+                <span class="text-xl font-semibold text-gray-500"
+                  >SALGADOS</span
+                >
+              </div>
+              <div
+                class="flex flex-grow flex-row gap-14 overflow-scroll overflow-y-hidden smooth-scroll"
+              >
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/chad-montano-MqT0asuoIcU-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">Pizza</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="pt-4 pb-4">
+                <span class="text-xl font-semibold text-gray-500">DOCES</span>
+              </div>
+              <div
+                class="flex flex-grow flex-row gap-14 overflow-scroll overflow-y-hidden scroll-smooth"
+              >
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                      id="add-item"
+                      itemprop="doce alt:12.00"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2" id="product-name">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400" id="product-id"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+                <div class="relative">
+                  <div class="flex w-40 h-40 select-none">
+                    <div
+                      class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="assets/images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg"
+                      class="w-40 h-40 object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold pt-2">doce alt</span>
+                    <span class="font-semibold pt-2 text-blue-400"
+                      >R$ 12,00</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden lg:inline-block w-1/4 rounded bg-gray-100 rounded-md"
+        >
+          <div class="h-full">
+            <div class="bg-gray-200 border-b border-blue-400 rounded-t-md">
+              <div class="flex justify-between p-4">
+                <div class="flex flex-col">
+                  <span class="text-xl">Pizza</span>
+                  <span class="text-gray-600 font-semibold">Sabor: Frango</span>
+                  <span class="text-gray-600 font-semibold">Unidades: 1x</span>
+                </div>
+                <span class="text-xl text-blue-400">R$ 12,00</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-auto p-2 pr-4 bg-blue-400 w-full text-white rounded-b-md cursor-pointer hover:brightness-90 transition select-none"
+          >
+            <div class="flex justify-between">
+              <span class="font-semibold" id="cart-overview">Carrinho (0)</span>
+              <span class="font-semibold" id="cart-total">R$ 12,00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

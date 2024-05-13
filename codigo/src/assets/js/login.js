@@ -11,7 +11,18 @@ document.addEventListener("keypress", (event) => {
 });
 
 $(document).ready(function () {
-  listUsers();
+  const cookies = getCookie(document.cookie);
+
+  if (cookies) {
+    const sessionHandler = new Session();
+
+    sessionHandler.verify(cookies['sessionid'])
+
+    if(cookies['isSessionExpired'] === 'true') {
+      eraseCookies();
+      window.location.href = "/index.html";
+    }
+  }
   $("#email").on("change", function (e) {
     if (emailRegex.test(e.target.value)) {
       email = e.target.value;

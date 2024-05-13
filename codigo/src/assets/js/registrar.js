@@ -10,6 +10,19 @@ const passwordRegex = /^.{6,}$/;
 const emailRegex = /^\S+@\S+\.\S+$/;
 
 $(document).ready(function () {
+  const cookies = getCookie(document.cookie);
+
+  if (cookies) {
+    const sessionHandler = new Session();
+
+    sessionHandler.verify(cookies['sessionid'])
+
+    if(cookies['isSessionExpired'] === 'true') {
+      eraseCookies();
+      window.location.href = "/index.html";
+    }
+  }
+
   $("#codigo").on("change", function (e) {
     if (codigoRegex.test(e.target.value)) {
       codigoDePessoa = e.target.value;
