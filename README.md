@@ -3,10 +3,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-* João Vitor Caires Damasceno Silva
 * Fernando Rodrigues da Mata
-* Victor Chaves Janot Pacheco Lopes
-* Marcelo Esteves Bernardi
 * Manoel Rodrigues Bezerra Neto 
 
 ## Professores responsáveis
