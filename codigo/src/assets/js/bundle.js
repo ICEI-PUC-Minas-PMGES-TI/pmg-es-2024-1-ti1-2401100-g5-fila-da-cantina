@@ -181,9 +181,6 @@ class Auth {
           const session = new Session();
 
           session.create(result.docs[0]._id);
-          const sessionId = window.localStorage.getItem("session");
-
-          session.verify(result.docs[0]._id, sessionId);
 
           window.location.href = "/index.html";
         }
