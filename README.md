@@ -4,12 +4,13 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 ## Alunos integrantes da equipe
 
 * Fernando Rodrigues da Mata
-* Manoel Rodrigues Bezerra Neto 
+* Manoel Rodrigues Bezerra Neto
 
 ## Professores responsáveis
 
 * Diego Augusto de Faria Barros
 * Simone Alves Nogueira
+* Danilo Boechat Seufitelli
 
 ## Instruções de utilização
 

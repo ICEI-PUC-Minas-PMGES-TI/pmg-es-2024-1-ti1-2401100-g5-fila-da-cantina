@@ -103,34 +103,13 @@
       </div>
     </header>
     <main>
-      <div class="m-8 md:mx-20 border rounded-md">
-        <div class="p-4 w-full flex flex-row justify-between">
-          <div>
-            <span class="text-bold text-2xl">Pizza</span>
-          </div>
-          <div>
-            <div>
-              <span class="text-bold text-2xl text-blue-400">R$ 30</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 flex flex-row gap-4 items-center">
-          <div class="w-4 h-4 fill-blue-400 cursor-pointer hover:brightness-90">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path
-                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-              />
-            </svg>
-          </div>
-          <span>10</span>
-          <div class="w-4 h-4 fill-blue-400 cursor-pointer hover:brightness-90">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
-            </svg>
-          </div>
-        </div>
-      </div>
+      <div class="m-8 md:mx-20 border rounded-md" id="cart-details"></div>
       <div class="p-8 md:p-20 w-full flex justify-end">
-        <button class="bg-blue-400 px-4 py-2 rounded-md text-white border hover:brightness-90 font-semibold transition-all text-md">Finalizar</button>
+        <button
+          class="bg-blue-400 px-4 py-2 rounded-md text-white border hover:brightness-90 font-semibold transition-all text-md"
+        >
+          Finalizar
+        </button>
       </div>
     </main>
   </body>
