@@ -557,8 +557,8 @@
                     <div
                       id="add-item-to-cart"
                       class="absolute flex p-2 rounded-full bg-blue-400 m-28 cursor-pointer hover:brightness-105"
-                      itemprop="itemId"
-                      >
+                      itemprop='{"itemprop": {"name": "french-toast", "price": "12.00"}}'
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
@@ -589,24 +589,14 @@
         <div
           class="hidden lg:inline-block w-1/4 rounded bg-gray-100 rounded-md"
         >
-          <div class="h-full">
-            <div class="bg-gray-200 border-b border-blue-400 rounded-t-md">
-              <div class="flex justify-between p-4">
-                <div class="flex flex-col">
-                  <span class="text-xl">Pizza</span>
-                  <span class="text-gray-600 font-semibold">Sabor: Frango</span>
-                  <span class="text-gray-600 font-semibold">Unidades: 1x</span>
-                </div>
-                <span class="text-xl text-blue-400">R$ 12,00</span>
-              </div>
-            </div>
+          <div class="h-full" id="cart">
           </div>
           <div
             class="mt-auto p-2 pr-4 bg-blue-400 w-full text-white rounded-b-md cursor-pointer hover:brightness-90 transition select-none"
           >
             <div class="flex justify-between">
               <span class="font-semibold" id="cart-overview">Carrinho (0)</span>
-              <span class="font-semibold" id="cart-total">R$ 12,00</span>
+              <span class="font-semibold" id="cart-total">R$ 0</span>
             </div>
           </div>
         </div>
@@ -615,7 +605,7 @@
           style="z-index: 1000"
           class="fixed bottom-0 left-0 w-full bg-blue-400 text-white text-left p-2 py-2 md:hidden cursor-pointer"
         >
-          <span class="text-xl font-semibold">Carrinho (1)</span>
+          <span class="text-xl font-semibold" id="cart-overview-mobile">Carrinho (0)</span>
         </div>
       </div>
     </main>
