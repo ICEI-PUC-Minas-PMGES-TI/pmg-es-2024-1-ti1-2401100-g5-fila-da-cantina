@@ -65,6 +65,7 @@ $(document).ready(function () {
         </div>
 `;
 
+          $("#cart-details").empty();
           $("#cart-details").append($newDiv);
         });
       }
@@ -86,21 +87,28 @@ $(document).ready(function () {
         .siblings(".p-4")
         .find(".product-name");
 
-      itemNameSpan.raplace(" ", "-");
-      itemNameSpan.toLowerCase();
+      var itemNameText = itemNameSpan.text();
+
+      var replaced = itemNameText.replace(" ", "-");
+      var lowerCased = replaced.toLowerCase();
 
       var cart = window.localStorage.getItem("cart");
 
       if (cart) {
-        var cartItems = JSON.parsee(cart);
+        var cartItems = JSON.parse(cart);
 
         if (cartItems) {
-          cartItems.map((item, index) => {
-            if (item.name === itemNameSpan) {
-              const newObj = structuredClone(cartItems);
+          cartItems.map((item) => {
+            if (item.name === lowerCased) {
+              item.units++;
+              window.localStorage.setItem("cart", JSON.stringify(cartItems));
 
-              newObj[index].units = currentUnits - 1;
-              window.localStorage.setItem("cart", JSON.stringify(newObj));
+              var priceSpan = $(this)
+                .closest(".p-4")
+                .prev()
+                .find("span.text-blue-400");
+              var newPrice = item.price * (currentUnits + 1);
+              priceSpan.text("R$ " + parseInt(newPrice));
             }
           });
         }
@@ -112,6 +120,37 @@ $(document).ready(function () {
 
       var currentUnits = parseInt(unitsSpan.text());
       unitsSpan.text(currentUnits - 1);
+
+      var itemNameSpan = $(this)
+        .closest(".p-4")
+        .siblings(".p-4")
+        .find(".product-name");
+
+      var itemNameText = itemNameSpan.text();
+
+      var replaced = itemNameText.replace(" ", "-");
+      var lowerCased = replaced.toLowerCase();
+
+      var cart = window.localStorage.getItem("cart");
+
+      if (cart) {
+        var cartItems = JSON.parse(cart);
+
+        if (cartItems) {
+          cartItems.map((item) => {
+            if (item.name === lowerCased) {
+              item.units--;
+              window.localStorage.setItem("cart", JSON.stringify(cartItems));
+              var priceSpan = $(this)
+                .closest(".p-4")
+                .prev()
+                .find("span.text-blue-400");
+              var newPrice = item.price * (currentUnits - 1);
+              priceSpan.text("R$ " + parseInt(newPrice));
+            }
+          });
+        }
+      }
     });
   }
 });
