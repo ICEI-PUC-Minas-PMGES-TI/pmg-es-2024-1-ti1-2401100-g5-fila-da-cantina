@@ -1,31 +1,28 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Cantina Express
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Rodrigues da Mata
+    given-names: Fernando
+  - family-names: Rodrigues Bezerra Neto
+    given-names: Manoel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Alves Nogueira
+    given-names: Simone
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Boechat Seufitelli
+    given-names: Danilo
+  - name-suffix: Professor
+  affiliation: PUC Minas
+    family-names: Augusto de Faria Barros
+    given-names: Diego
 keywords:
-  - 
-  - 
-repository-code: 
+  - Fila da Cantina
+  - Queue Manager
+  - Cantina Manager
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g5-fila-da-cantina
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-06-25
