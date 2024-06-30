@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout</title>
+    <title>Document</title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -14,7 +14,6 @@
     <script src="./assets/js/bundle.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/index.js"></script>
-    <script src="assets/js/checkout.js"></script>
   </head>
   <body>
     <header class="p-6 md:p-20 flex flex-row justify-between items-center">
@@ -55,13 +54,14 @@
           </div>
         </div>
       </div>
-      <div id="logo">
-        <span class="text-3xl">LOGO</span>
+      <div id="logo" class="flex flex-col p-4 bg-neutral-100 rounded-full justify-center items-center select-none">
+        <span class="text-3xl font-bold text-blue-400 w-min h-min">Cantina</span
+        ><span class="text-xl text-red-400 w-min h-min font-light">Express</span>
       </div>
       <div class="flex flex-row gap-10">
         <div>
           <button
-            onclick="window.location='/registrar.html';"
+            onclick="window.location='/registrar';"
             class="border border-blue-400 w-36 h-12 rounded-md text-blue-400 transition hover:bg-blue-400 hover:text-white"
             id="register"
           >
@@ -70,7 +70,7 @@
         </div>
         <div>
           <button
-            onclick="window.location='/login.html';"
+            onclick="window.location='/login';"
             class="bg-blue-400 w-36 h-12 rounded-md text-white transition hover:brightness-90"
             id="login"
           >
@@ -103,13 +103,37 @@
       </div>
     </header>
     <main>
-      <div class="m-8 md:mx-20 border rounded-md" id="cart-details"></div>
-      <div class="p-8 md:p-20 w-full flex justify-end">
-        <button
-          class="bg-blue-400 px-4 py-2 rounded-md text-white border hover:brightness-90 font-semibold transition-all text-md"
+      <div class="flex justify-between m-4 md:m-8" id="globalDiv">
+        <div class="w-full lg:w-3/4 h-full m-2">
+          <div class="rounded-md bg-blue-400 w-full">
+            <span class="pr-2 pl-2 text-white font-semibold">Cardápio</span>
+          </div>
+          <div class="flex flex-col flex-grow pt-2" id="start_cardapio"></div>
+        </div>
+        <div
+          class="hidden lg:inline-block w-1/4 rounded bg-gray-100 rounded-md"
         >
-          Finalizar
-        </button>
+          <div class="h-full" id="cart"></div>
+          <div
+            class="mt-auto p-2 pr-4 bg-blue-400 w-full text-white rounded-b-md cursor-pointer hover:brightness-90 transition select-none"
+            onclick="window.location.href='/checkout'"
+          >
+            <div class="flex justify-between">
+              <span class="font-semibold" id="cart-overview">Carrinho (0)</span>
+              <span class="font-semibold" id="cart-total">R$ 0</span>
+            </div>
+          </div>
+        </div>
+        <div
+          id="open-cart-mobile"
+          style="z-index: 1000"
+          class="fixed bottom-0 left-0 w-full bg-blue-400 text-white text-left p-2 py-2 md:hidden cursor-pointer"
+          onclick="window.location.href='/checkout'"
+        >
+          <span class="text-xl font-semibold" id="cart-overview-mobile"
+            >Carrinho (0)</span
+          >
+        </div>
       </div>
     </main>
   </body>

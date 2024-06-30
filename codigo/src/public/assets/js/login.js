@@ -20,7 +20,7 @@ $(document).ready(function () {
 
     if(cookies['isSessionExpired'] === 'true') {
       eraseCookies();
-      window.location.href = "/index.html";
+      window.location.href = "/";
     }
   }
   $("#email").on("change", function (e) {

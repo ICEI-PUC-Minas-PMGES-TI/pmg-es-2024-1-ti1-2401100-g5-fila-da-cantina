@@ -182,13 +182,13 @@ class Auth {
 
           session.create(result.docs[0]._id);
 
-          window.location.href = "/index.html";
+          window.location.href = "/";
         }
       })
       .catch(function (err) {
         if (err === "session not found" || err === "session expired") {
           window.localStorage.removeItem("session");
-          window.location = "/login.html";
+          window.location = "/login";
         }
       });
   }
