@@ -300,13 +300,78 @@ Simular um checkout real durante a realização de um pedido.
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### Teste 1: Registro de Usuário
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+**Funcionalidade**: Registro de novos usuários
 
+**Passos Realizados**:
+1. Navegar para a página de registro.
+2. Preencher o formulário de registro com um email válido, código de pessoa, nome e uma senha.
+3. Clicar no botão "Registrar".
+4. Verificar a mensagem de confirmação de registro.
+
+**Resultados Esperados**:
+- O sistema deve exibir uma mensagem de confirmação indicando que o registro foi bem-sucedido.
+
+**Resultados Obtidos**:
+- A mensagem foi exibida conforme esperado.
+
+**Status**: Aprovado
+
+### Teste 2: Login de Usuário
+
+**Funcionalidade**: Login de usuários existentes
+
+**Passos Realizados**:
+1. Navegar para a página de login.
+2. Preencher o formulário de login com um email e senha válidos.
+3. Clicar no botão "Login".
+4. Criação da sessão do usuário.
+5. Verificar o redirecionamento para a página inicial.
+
+**Resultados Esperados**:
+- O sistema deve redirecionar o usuário para a página inicial e exibir o cardápio.
+
+**Resultados Obtidos**:
+- O usuário foi redirecionado para a página inicial e foi exibido o cardápio.
+
+**Status**: Aprovado
+
+### Teste 3: Visualização do Cardápio
+
+**Funcionalidade**: Visualização do cardápio disponível
+
+**Passos Realizados**:
+1. Navegar para a página de cardápio.
+2. Verificar a exibição de todos os itens do cardápio.
+3. Verificar a atualização do cardápio.
+
+**Resultados Esperados**:
+- Todos os itens do cardápio devem ser exibidos corretamente.
+- O cardápio deve refletir as atualizações recentes.
+
+**Resultados Obtidos**:
+- Todos os itens do cardápio foram exibidos corretamente e as atualizações foram refletidas conforme esperado.
+
+**Status**: Aprovado
+
+### Teste 4: Pedido Antecipado
+
+**Funcionalidade**: Realização de pedidos antecipados
+
+**Passos Realizados**:
+1. Navegar para a página de cardápio.
+2. Selecionar um item e adicionar ao carrinho.
+3. Navegar para o carrinho e clicar em "Finalizar Pedido".
+4. Ser redirecionado para o checkout do Mercado Pago.
+
+**Resultados Esperados**:
+- Ser redirecionado para o checkout do Mercado Pago para a realização do pagamento.
+
+**Resultados Obtidos**:
+- Usuário foi redirecionado com sucesso.
+
+**Status**: Aprovado
 
 # Referências
 
