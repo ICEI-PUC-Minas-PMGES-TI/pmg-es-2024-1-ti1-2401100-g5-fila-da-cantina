@@ -223,8 +223,6 @@ Serão utilizadas a branch **master** para o código final e a branch **dev** pa
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
 ## Tecnologias Utilizadas
 
 ### HTML
