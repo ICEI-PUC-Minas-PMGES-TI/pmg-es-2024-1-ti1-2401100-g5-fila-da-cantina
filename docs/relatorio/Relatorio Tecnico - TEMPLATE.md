@@ -232,12 +232,18 @@ Serão utilizadas a branch **master** para o código final e a branch **dev** pa
 
 ## Tecnologias Utilizadas
 
-> HTML - Construção de interfaces.
-> TailwindCSS - Agilidade para desenvolvimento dos estilos.
-> Javascript & jQuery - Manipulação da DOM para deixar o projeto funcional.
-> PouchDB - Persistência de dados in-memory para tornar o projeto fiel ao seu objetivo.
-> Node.js & Express - Lidar com requisições e entregar respostas para o cliente.
-> MercadoPago SDK - Simular um checkout real durante a realização de um pedido.
+# HTML
+Construção de interfaces.
+# TailwindCSS
+Agilidade para desenvolvimento dos estilos.
+# Javascript & jQuery
+Manipulação da DOM para deixar o projeto funcional.
+# PouchDB
+Persistência de dados in-memory para tornar o projeto fiel ao seu objetivo.
+# Node.js & Express
+Lidar com requisições e entregar respostas para o cliente.
+# MercadoPago SDK
+Simular um checkout real durante a realização de um pedido.
 
 ## Arquitetura da solução
 
