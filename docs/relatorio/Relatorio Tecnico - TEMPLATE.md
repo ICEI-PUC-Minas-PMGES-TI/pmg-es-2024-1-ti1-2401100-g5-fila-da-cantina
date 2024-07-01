@@ -159,10 +159,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|---------------------------------------------------|-------|
 |RF-001| Permitir que o usuário se cadastre                | ALTA  |
 |RF-002| Permitir que o usuário realize um pedido          | ALTA  |
-|RF-003| CRUD de usuários e produtos                       | ALTA  |
+|RF-003| Permitir que o usuário faça login                 | ALTA  |
 |RF-004| Administrar disponibilidade do cardápio           | MÉDIA |
-|RF-005| Permitir que o usuário faça um pedido em grupo    | MÉDIA |
-|RF-006| Permitir que o usuário veja seu gasto médio       | BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -202,11 +200,11 @@ Nosso grupo optou pela divisão das partes do trabalho entre os membros do grupo
 
 ## Divisão de Papéis
 
-- Produção da capa e do entendimento 1 e 2: João Caires
+- Produção da capa e do entendimento 1 e 2: Manoel
 - Produção do entendimento 3, 4 e 5: Fernando
 - Etapa de exploração: Grupo todo
 - Slides: Grupo todo
-- Github: Manoel, Marcelo, Fernando, Victor e João
+- Github: Manoel e Fernando.
 - Documentação do projeto (PDF): Grupo todo
 
 
