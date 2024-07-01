@@ -212,7 +212,7 @@ Nosso grupo optou pela divisão das partes do trabalho entre os membros do grupo
 |-----------|-------------------------|---------------|
 |Processo de Design Thinkgin  | Miro |  [https://miro.com/app/board/uXjVNiWtY6Q=](https://miro.com/app/board/uXjVNiWtY6Q=) | 
 |Repositório de código | GitHub | [https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g5-fila-da-cantina](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2401100-g5-fila-da-cantina) | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
+|Hospedagem do site | Render |  [ttps://pmg-es-2024-1-ti1-2401100-g5-fila-da.onrender.com](https://pmg-es-2024-1-ti1-2401100-g5-fila-da.onrender.com/) | 
 |Protótipo Interativo | MavelApp ou Figma | https://www.figma.com/file/DSOpo60pZzlnmsfKpcPWBX/Cantina-Express?type=design&node-id=2%3A112&mode=design&t=Sdg7IsGcFkNomfZM-1 |
 |Ferramentas de comunicação | Discord | https://discord.gg
 |Editor de código | Visual Studio Code e Intelijj IDEA | https://code.visualstudio.com/ e https://www.jetbrains.com/idea/
