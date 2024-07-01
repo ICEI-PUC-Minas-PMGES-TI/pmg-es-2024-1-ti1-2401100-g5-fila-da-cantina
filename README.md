@@ -1,5 +1,5 @@
 # Cantina Express
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O software Cantina Express tem o objetivo de agilizar as filas das cantinas e facilitar a experiência do cliente durante a compra do seu lanche. Integramos o software com gateways de pagamento (Mercado Pago) para facilitar o tratamento de dados sensíveis, como cartão de crédito, e informações pessoais. Futuramente serão adicionados sistemas de gestão por parte do dono do estabelecimento.
 
 ## Alunos integrantes da equipe
 
