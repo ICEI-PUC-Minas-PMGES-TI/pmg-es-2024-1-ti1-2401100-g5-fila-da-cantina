@@ -254,11 +254,21 @@ Simular um checkout real durante a realização de um pedido.
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
+#### Teste 1: Registro de Usuário
+**Descrição**: Verificar a funcionalidade de registro de novos usuários.  
+**O que esperar**: Usuário registrado com sucesso.
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+#### Teste 2: Login de Usuário
+**Descrição**: Verificar a funcionalidade de login de usuários existentes.  
+**O que esperar**: Usuário faz login com sucesso.
+
+#### Teste 3: Visualização do Cardápio
+**Descrição**: Verificar a funcionalidade de visualização do cardápio.  
+**O que esperar**: Cardápio exibido corretamente.
+
+#### Teste 4: Pedido Antecipado
+**Descrição**: Verificar a funcionalidade de pedidos antecipados.  
+**O que esperar**: Pedido realizado com sucesso.
 
 ## Plano de Testes
 
