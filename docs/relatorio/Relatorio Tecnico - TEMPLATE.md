@@ -223,9 +223,6 @@ Nosso grupo optou pela divisão das partes do trabalho entre os membros do grupo
 
 Serão utilizadas a branch **master** para o código final e a branch **dev** para testes.
 
-# **############## SPRINT 1 ACABA AQUI #############**
-
-
 # Projeto da Solução
 
 ......  COLOQUE AQUI O SEU TEXTO ......
@@ -267,27 +264,39 @@ Simular um checkout real durante a realização de um pedido.
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### Funcionalidades Avaliadas
+1. **Registro de Usuário**
+   - **Descrição**: Teste da funcionalidade de registro de novos usuários no sistema.
+   - **Objetivo**: Verificar se o processo de registro é intuitivo e funcional.
+   - **Resultados Esperados**: Usuário deve ser capaz de se registrar com sucesso utilizando um email válido.
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+2. **Login de Usuário**
+   - **Descrição**: Teste da funcionalidade de login de usuários existentes.
+   - **Objetivo**: Garantir que os usuários possam acessar suas contas de maneira segura e rápida.
+   - **Resultados Esperados**: Usuário deve conseguir fazer login utilizando credenciais válidas.
 
-## Ferramentas de Testes (Opcional)
+3. **Visualização do Cardápio**
+   - **Descrição**: Teste da funcionalidade de visualização do cardápio disponível na cantina.
+   - **Objetivo**: Assegurar que o cardápio é exibido corretamente e atualizado conforme necessário.
+   - **Resultados Esperados**: Usuário deve ser capaz de visualizar todos os itens disponíveis no cardápio.
 
-......  COLOQUE AQUI O SEU TEXTO ......
+4. **Pedido Antecipado**
+   - **Descrição**: Teste da funcionalidade de realizar pedidos antecipados.
+   - **Objetivo**: Verificar se os usuários conseguem fazer pedidos antecipados e se os mesmos são processados corretamente.
+   - **Resultados Esperados**: Usuário deve conseguir realizar um pedido antecipado e receber confirmação do pedido.
 
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+### Grupo de Usuários Participantes
+1. **Estudantes**
+   - **Descrição**: Estudantes de várias disciplinas e anos que utilizam a cantina regularmente.
+   - **Objetivo**: Avaliar a funcionalidade do sistema em um ambiente real com uso frequente.
+
+2. **Professores**
+   - **Descrição**: Professores que utilizam a cantina durante seus intervalos.
+   - **Objetivo**: Garantir que o sistema atenda às necessidades dos professores que têm horários de intervalo limitados.
+
+3. **Gestores da Cantina**
+   - **Descrição**: Gestores responsáveis pela operação diária da cantina.
+   - **Objetivo**: Avaliar a eficácia do sistema na administração dos pedidos e no gerenciamento da fila.
 
 ## Registros de Testes
 
