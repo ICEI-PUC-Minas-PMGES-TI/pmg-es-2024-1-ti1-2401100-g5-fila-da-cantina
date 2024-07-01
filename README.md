@@ -14,4 +14,14 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+### Passos necessários
+Instalação do Node.js, que pode ser feita [aqui](https://nodejs.org/en/download/package-manager).
+Após isto, acessar a pasta */codigo/src*, e dentro do prompt de comando digitar os seguintes comandos:
+
+*npm install*
+*npm start*
+
+- Lembrando que é preciso marcar a opção de adicionar o Node ao PATH do Windows ou adiciona-lo manualmente.
+
+Seguintes todos os passos de maneira certa, o projeto estará rodando na url: http://localhost:3000
+Caso queira integrar o Mercado Pago no projeto, é preciso criar uma conta no banco e criar uma integração no portal de desenvolvedores do próprio Mercado Pago e trocar o *auth-token*,
