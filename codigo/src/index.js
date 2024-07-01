@@ -132,6 +132,6 @@ app.get('/payment/create', (req, res) => {
     });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Server rodando em http://localhost:3000');
 });
