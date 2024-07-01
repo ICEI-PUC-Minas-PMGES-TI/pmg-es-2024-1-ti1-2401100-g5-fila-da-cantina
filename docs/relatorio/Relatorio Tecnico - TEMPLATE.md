@@ -310,11 +310,9 @@ Simular um checkout real durante a realização de um pedido.
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+- W3Schools. Disponível em: https://www.w3schools.com/. Acesso em: 30 jun. 2024.
+- jQuery API Documentation. Disponível em: https://api.jquery.com/. Acesso em: 30 jun. 2024.
+- PouchDB API Documentation. Disponível em: https://pouchdb.com/api.html. Acesso em: 30 jun. 2024.
+- Mercado Pago Developers. Disponível em: https://www.mercadopago.com.br/developers/pt/docs. Acesso em: 30 jun. 2024.
+- Selenium Documentation. Disponível em: https://www.selenium.dev/documentation/. Acesso em: 30 jun. 2024.
+- Express.js API Documentation. Disponível em: https://expressjs.com/en/4x/api.html. Acesso em: 30 jun. 2024.
