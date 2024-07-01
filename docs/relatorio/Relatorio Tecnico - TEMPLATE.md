@@ -7,9 +7,7 @@ Engenharia de Software
 
 ## Participantes
 
-- João Vitor Caires Damasceno Silva
 - Fernando Rodrigues da Mata
-- Marcelo Esteves Bernardi
 - Manoel Rodrigues Bezerra Neto
 
 # Estrutura do Documento
